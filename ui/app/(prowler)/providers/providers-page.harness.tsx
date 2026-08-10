@@ -1144,9 +1144,7 @@ export class ProvidersPageHarness extends BrowserHarness<OrgFixture> {
 
   /** Wait until the inline edit-name modal is open. */
   async waitForEditNameModal(): Promise<void> {
-    await this.waitForText(
-      /If left blank, Prowler will use the name stored in AWS/,
-    );
+    await this.waitForText(/Edit Organization Name/);
   }
 
   async fillEditName(value: string): Promise<void> {
